@@ -1,0 +1,6 @@
+{
+  "name": "Teetales.pk Website",
+  "description": "Premium Print-on-Demand T-shirt brand focusing on storytelling through apparel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

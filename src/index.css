@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #1a1a1a;
+  --color-brand-secondary: #5c5c5c;
+  --color-brand-accent: #c47549;
+
+  --color-bg-main: #f5f3ed;
+  --color-bg-alt: #eae6db;
+  --color-bg-card: #ffffff;
+  --color-bg-dark: #1a1a1a;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-bg-main text-brand-primary;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading tracking-tight;
+  }
+}
