@@ -1,40 +1,9 @@
 import { motion } from "motion/react";
+import { memo } from "react";
 import packOf5Tshirts from "../assets/images/pack_of_5_tshirts_1781068125568.png";
+import { FEATURED_PRODUCTS } from "../constants/data";
 
-const packs = [
-  {
-    id: 1,
-    name: "Pack of 7 Plain T Shirts",
-    perShirt: "Rs.686 a shirt",
-    price: "Rs.4,799.00",
-    oldPrice: "Rs.8,043",
-    badge: "WARDROBE PACK",
-    image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 2,
-    name: "Pack of 10 Plain T Shirts",
-    perShirt: "Rs.660 a shirt",
-    price: "Rs.6,599.00",
-    oldPrice: "Rs.11,490",
-    badge: "FAMILY PACK",
-    image:
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    id: 3,
-    name: "Pack of 3 Plain T Shirts",
-    perShirt: "Rs.766 a shirt",
-    price: "Rs.2,299.00",
-    oldPrice: "Rs.3,447",
-    badge: "STARTER",
-    image:
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-  },
-];
-
-export default function FeaturedProducts() {
+const FeaturedProducts = memo(() => {
   return (
     <div
       id="packs"
@@ -56,6 +25,7 @@ export default function FeaturedProducts() {
             <img
               src={packOf5Tshirts}
               alt="Pack of 5 Plain T Shirts"
+              loading="lazy"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
           </div>
@@ -78,14 +48,14 @@ export default function FeaturedProducts() {
               </span>
             </div>
             <button className="bg-brand-primary text-white font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-full w-full hover:bg-brand-primary/80 transition-colors">
-              Build your Pack of 5 &rarr;
+              Build your Pack of 5 →
             </button>
           </div>
         </div>
 
         {/* Smaller Packs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {packs.map((pack) => (
+          {FEATURED_PRODUCTS.map((pack) => (
             <div
               key={pack.id}
               className="bg-bg-card rounded-2xl overflow-hidden shadow-sm border border-brand-primary/5 group cursor-pointer hover:shadow-md transition-shadow flex flex-col"
@@ -97,6 +67,7 @@ export default function FeaturedProducts() {
                 <img
                   src={pack.image}
                   alt={pack.name}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -122,4 +93,7 @@ export default function FeaturedProducts() {
       </div>
     </div>
   );
-}
+});
+
+FeaturedProducts.displayName = "FeaturedProducts";
+export default FeaturedProducts;
