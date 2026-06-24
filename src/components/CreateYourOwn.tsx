@@ -65,7 +65,7 @@ export default function CreateYourOwn() {
             </div>
 
             <a
-              href="#"
+              href="/New folder/customize"
               className="inline-flex items-center justify-center gap-2 bg-brand-accent px-10 py-4 text-xs font-extrabold uppercase tracking-widest text-black transition-all hover:bg-white"
             >
               <Paintbrush className="w-4 h-4" />

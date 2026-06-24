@@ -54,7 +54,9 @@ export default function FeatureSplit() {
               rupees. Clean lines, easy drape, true to size.
             </p>
             <a
-              href="#size-guide"
+              href="/sizeguide.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-brand-primary px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-primary transition-all hover:bg-brand-primary/5"
             >
               See the size guide <ArrowRight className="h-4 w-4 ml-1" />

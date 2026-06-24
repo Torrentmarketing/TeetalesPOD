@@ -43,19 +43,19 @@ export default function Header() {
               <a href="#" className="hover:opacity-60 transition-opacity">
                 Home
               </a>
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <a href="#about" className="hover:opacity-60 transition-opacity">
                 About
               </a>
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <a href="https://wa.me/923431659033?text=Hi,%20I'd%20like%20to%20know%20more%20about%20the%20TeeTales%20referral%20program!" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
                 Referal
               </a>
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <a href="/sizeguide.jpg" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
                 Size Guide
               </a>
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <a href="#packs" className="hover:opacity-60 transition-opacity">
                 Packs
               </a>
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <a href="/New folder/library" className="hover:opacity-60 transition-opacity">
                 T Shirts
               </a>
             </nav>
@@ -97,32 +97,32 @@ export default function Header() {
               </div>
               <div className="space-y-6 px-4 py-6 text-xs uppercase font-bold tracking-widest text-brand-primary">
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="#" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Home
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="#about" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     About
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="https://wa.me/923431659033?text=Hi,%20I'd%20like%20to%20know%20more%20about%20the%20TeeTales%20referral%20program!" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Referal
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="/sizeguide.jpg" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Size Guide
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="#packs" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Packs
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 block p-2 hover:opacity-60">
+                  <a href="/New folder/library" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     T Shirts
                   </a>
                 </div>

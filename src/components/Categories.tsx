@@ -26,7 +26,10 @@ const values = [
 
 export default function Categories() {
   return (
-    <div className="bg-bg-alt py-24 sm:py-32 border-b border-brand-primary/10">
+    <div
+      id="about"
+      className="bg-bg-alt py-24 sm:py-32 border-b border-brand-primary/10"
+    >
       <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-[10px] uppercase font-bold tracking-widest text-brand-accent mb-4">
