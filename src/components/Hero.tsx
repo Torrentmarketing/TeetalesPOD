@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "../assets/images/hero_teetales_1781068324924.png";
 
 export default function Hero() {
@@ -51,19 +52,19 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <a
-            href="#packs"
-            className="group flex items-center justify-center gap-2 bg-brand-primary px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-brand-primary/80 w-full sm:w-auto"
+          <Link
+            to="/build-pack"
+            className="group flex items-center justify-center gap-2 bg-brand-primary px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest text-white transition-all hover:bg-brand-primary/80 w-full sm:w-auto text-center"
           >
             Shop the Pack of 5
-          </a>
-          <a
-            href="#collections"
-            className="group flex items-center justify-center gap-2 border border-brand-primary bg-transparent px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-primary transition-all hover:bg-brand-primary/5 w-full sm:w-auto"
+          </Link>
+          <Link
+            to="/build-pack"
+            className="group flex items-center justify-center gap-2 border border-brand-primary bg-transparent px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest text-brand-primary transition-all hover:bg-brand-primary/5 w-full sm:w-auto text-center"
           >
             All Packs{" "}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { ShoppingBag, Menu, User, Search, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,8 +25,8 @@ export default function Header() {
 
           {/* Logo (Left on Desktop, Center on Mobile) */}
           <div className="flex items-center justify-center lg:justify-start lg:w-48">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="font-heading text-2xl md:text-3xl font-black uppercase tracking-tighter text-brand-primary flex items-center relative"
             >
               <span className="relative z-10 flex items-center">
@@ -34,16 +35,16 @@ export default function Header() {
                   TT
                 </span>
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Navigation (Center) */}
           <div className="flex-1 lg:flex lg:items-center lg:justify-center hidden">
             <nav className="flex gap-8 text-xs font-bold tracking-widest uppercase text-brand-primary">
-              <a href="#" className="hover:opacity-60 transition-opacity">
+              <Link to="/" className="hover:opacity-60 transition-opacity">
                 Home
-              </a>
-              <a href="#about" className="hover:opacity-60 transition-opacity">
+              </Link>
+              <a href="/#about" className="hover:opacity-60 transition-opacity">
                 About
               </a>
               <a href="https://wa.me/923431659033?text=Hi,%20I'd%20like%20to%20know%20more%20about%20the%20TeeTales%20referral%20program!" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
@@ -52,12 +53,12 @@ export default function Header() {
               <a href="/sizeguide.jpg" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">
                 Size Guide
               </a>
-              <a href="#packs" className="hover:opacity-60 transition-opacity">
+              <Link to="/build-pack" className="hover:opacity-60 transition-opacity">
                 Packs
-              </a>
-              <a href="/New folder/library" className="hover:opacity-60 transition-opacity">
+              </Link>
+              <Link to="/build-pack" className="hover:opacity-60 transition-opacity">
                 T Shirts
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -97,12 +98,12 @@ export default function Header() {
               </div>
               <div className="space-y-6 px-4 py-6 text-xs uppercase font-bold tracking-widest text-brand-primary">
                 <div className="flow-root">
-                  <a href="#" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
+                  <Link to="/" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Home
-                  </a>
+                  </Link>
                 </div>
                 <div className="flow-root">
-                  <a href="#about" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
+                  <a href="/#about" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     About
                   </a>
                 </div>
@@ -117,14 +118,14 @@ export default function Header() {
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#packs" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
+                  <Link to="/build-pack" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     Packs
-                  </a>
+                  </Link>
                 </div>
                 <div className="flow-root">
-                  <a href="/New folder/library" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
+                  <Link to="/build-pack" onClick={() => setIsMenuOpen(false)} className="-m-2 block p-2 hover:opacity-60">
                     T Shirts
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

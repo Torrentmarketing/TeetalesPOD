@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { memo } from "react";
+import { Link } from "react-router-dom";
 import packOf5Tshirts from "../assets/images/pack_of_5_tshirts_1781068125568.png";
 import { FEATURED_PRODUCTS } from "../constants/data";
 
@@ -47,17 +48,18 @@ const FeaturedProducts = memo(() => {
                 Rs.3,549.00
               </span>
             </div>
-            <button className="bg-brand-primary text-white font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-full w-full hover:bg-brand-primary/80 transition-colors">
+            <Link to="/build-pack?size=5" className="bg-brand-primary text-white font-bold text-xs uppercase tracking-widest py-4 px-6 rounded-full w-full hover:bg-brand-primary/80 transition-colors text-center block">
               Build your Pack of 5 →
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* Smaller Packs */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {FEATURED_PRODUCTS.map((pack) => (
-            <div
+            <Link
               key={pack.id}
+              to={`/build-pack?size=${pack.id === 1 ? 7 : pack.id === 2 ? 10 : 3}`}
               className="bg-bg-card rounded-2xl overflow-hidden shadow-sm border border-brand-primary/5 group cursor-pointer hover:shadow-md transition-shadow flex flex-col"
             >
               <div className="relative h-64 w-full overflow-hidden">
@@ -87,7 +89,7 @@ const FeaturedProducts = memo(() => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
